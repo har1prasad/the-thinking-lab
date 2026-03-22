@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# MkDocs build output
+site/
+
+# Virtual environment
+venv/
+.env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+

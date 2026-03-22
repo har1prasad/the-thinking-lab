@@ -1,0 +1,111 @@
+# Site Information
+site_name: The Thinking Lab
+site_author: Hari
+site_description: A digital library
+site_url: https://thethinkinglab.dev
+
+
+# Theme
+theme:
+  name: material
+
+  # Fonts
+  font:
+    text: Lexend
+    code: JetBrains Mono
+
+  # Branding
+  logo: assets/logo.png 
+  favicon: assets/favicon.ico
+
+  # Theme Features
+  features:
+    - content.code.copy
+    - navigation.top        # back to top button, useful for long notes pages
+    - search.suggest        # autocomplete in search
+    # - navigation.footer
+
+  # Color Palette
+  palette:
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+plugins:
+  - search
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+
+  # Not including in table of content
+  - toc:
+      toc_depth: 3
+
+  # Emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  # Code Highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+  # Advanced Code Blocks
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+  # Tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+
+# Social Links
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/hariprasad-ap/
+
+    - icon: fontawesome/brands/github
+      link: https://github.com/har1prasad
+
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/Har1prasad
+
+    - icon: simple/leetcode
+      link: https://leetcode.com/u/har1prasad/
+
+
+# Extra CSS
+extra_css:
+  - stylesheets/extra.css
+
+#navigation
+nav:
+  - Home: index.md
+  - About Me: About-me.md
+  - Notes:
+    - Python:
+      - Basics: notes/python/python-basics.md
+      - Object Oriented Programming: notes/python/python-OOP.md  
+  - Projects:
+    - Expense Tracker: projects/expense-tracker.md
+    - AI Web Scrapper: projects/AI-scrapper.md
+    - Flash cards: projects/flashcardsapp.md
+    - Snake Xenzia: projects/Snake-Xenzia.md
+    - Terminal projects: projects/terminal-projects.md    
