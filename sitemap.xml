@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://thethinkinglab.dev/</loc>
-         <lastmod>2026-03-22</lastmod>
+         <loc>https://har1prasad.github.io/the-thinking-lab/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
-         <loc>https://thethinkinglab.dev/About-me/</loc>
-         <lastmod>2026-03-22</lastmod>
+         <loc>https://har1prasad.github.io/the-thinking-lab/About-me/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
-         <loc>https://thethinkinglab.dev/notes/python/python-OOP/</loc>
-         <lastmod>2026-03-22</lastmod>
+         <loc>https://har1prasad.github.io/the-thinking-lab/notes/python/python-OOP/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
-         <loc>https://thethinkinglab.dev/notes/python/python-basics/</loc>
-         <lastmod>2026-03-22</lastmod>
+         <loc>https://har1prasad.github.io/the-thinking-lab/notes/python/python-basics/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
-         <loc>https://thethinkinglab.dev/projects/AI-scrapper/</loc>
-         <lastmod>2026-03-22</lastmod>
+         <loc>https://har1prasad.github.io/the-thinking-lab/projects/AI-scrapper/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
-         <loc>https://thethinkinglab.dev/projects/Snake-Xenzia/</loc>
-         <lastmod>2026-03-22</lastmod>
+         <loc>https://har1prasad.github.io/the-thinking-lab/projects/Snake-Xenzia/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
-         <loc>https://thethinkinglab.dev/projects/expense-tracker/</loc>
-         <lastmod>2026-03-22</lastmod>
+         <loc>https://har1prasad.github.io/the-thinking-lab/projects/expense-tracker/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
-         <loc>https://thethinkinglab.dev/projects/flashcardsapp/</loc>
-         <lastmod>2026-03-22</lastmod>
+         <loc>https://har1prasad.github.io/the-thinking-lab/projects/flashcardsapp/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
-         <loc>https://thethinkinglab.dev/projects/terminal-projects/</loc>
-         <lastmod>2026-03-22</lastmod>
+         <loc>https://har1prasad.github.io/the-thinking-lab/projects/terminal-projects/</loc>
+         <lastmod>2026-03-23</lastmod>
+    </url>
+    <url>
+         <loc>https://har1prasad.github.io/the-thinking-lab/projects/votebloc/</loc>
+         <lastmod>2026-03-23</lastmod>
     </url>
 </urlset>
