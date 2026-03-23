@@ -2,7 +2,7 @@
 site_name: The Thinking Lab
 site_author: Hari
 site_description: A digital library
-site_url: https://thethinkinglab.dev
+site_url: https://har1prasad.github.io/the-thinking-lab/
 
 
 # Theme
@@ -106,6 +106,7 @@ nav:
   - Projects:
     - Expense Tracker: projects/expense-tracker.md
     - AI Web Scrapper: projects/AI-scrapper.md
+    - VoteBloc: projects/votebloc.md
     - Flash cards: projects/flashcardsapp.md
     - Snake Xenzia: projects/Snake-Xenzia.md
     - Terminal projects: projects/terminal-projects.md    
