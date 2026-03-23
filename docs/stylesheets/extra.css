@@ -57,3 +57,8 @@
   /* links */
   --md-typeset-a-color: #8ab4f8;
 }
+
+/* make project names stand out */
+.md-typeset table td:nth-child(2) {
+  font-weight: 600;
+}

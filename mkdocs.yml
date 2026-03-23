@@ -49,6 +49,7 @@ markdown_extensions:
   - pymdownx.details
   - attr_list
   - md_in_html
+  - tables
   - pymdownx.blocks.caption
 
   # Not including in table of content
@@ -104,6 +105,7 @@ nav:
       - Basics: notes/python/python-basics.md
       - Object Oriented Programming: notes/python/python-OOP.md  
   - Projects:
+    - Overview: projects/index.md
     - Expense Tracker: projects/expense-tracker.md
     - AI Web Scrapper: projects/AI-scrapper.md
     - VoteBloc: projects/votebloc.md
