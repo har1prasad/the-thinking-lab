@@ -104,6 +104,8 @@ nav:
     - Python:
       - Basics: notes/python/python-basics.md
       - Object Oriented Programming: notes/python/python-OOP.md  
+    - DSA:
+      - Algorithms: notes/DSA/Algorithms.md
   - Projects:
     - Overview: projects/index.md
     - Expense Tracker: projects/expense-tracker.md
