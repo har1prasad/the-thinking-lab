@@ -76,9 +76,9 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
-# Social Links
 extra:
   social:
+  # Social Links
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/hariprasad-ap/
 
@@ -90,6 +90,11 @@ extra:
 
     - icon: simple/leetcode
       link: https://leetcode.com/u/har1prasad/
+  
+  analytics:
+  # Google analytics
+    provider: google
+    property: G-Q2FM4EYKLD
 
 
 # Extra CSS
@@ -115,3 +120,6 @@ nav:
     - Flash cards: projects/flashcardsapp.md
     - Snake Xenzia: projects/Snake-Xenzia.md
     - Terminal projects: projects/terminal-projects.md    
+
+
+

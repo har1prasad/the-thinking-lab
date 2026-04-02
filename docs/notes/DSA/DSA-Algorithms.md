@@ -167,7 +167,7 @@ In the case of bubble sort, the best and worst case scenarios can actually chang
 - **Best case**: If the data is pre-sorted, bubble sort becomes really fast. Because it only need to do one pass
 - **Worst case**: If the data is in reverse order, bubble sort becomes really slow (but still in the same complexity class as random data). Because every comparison leads to a swap, resulting in the maximum number of operations (O(n²)).
 
-!!! Question "Why Bubble Sort?"
+!!! Question "Why Bubble Sort"
     Bubble sort is famous for how easy it is to write and understand.
 
     However, it's one of the slowest sorting algorithms, and as a result is almost never used in practice. That said, we covered it because it's a useful thought exercise so that you can appreciate why the more complex and performant algorithms are better. 
@@ -317,7 +317,7 @@ In the case of merge sort, the best and worst case scenarios do not change the t
 
 - **Worst case**: Even if the data is in reverse order, merge sort still performs the same sequence of operations. Because the algorithm does not depend on the initial order of data, the time complexity remains **O(n log n)**
 
-!!! Question "Why Merge Sort?"
+!!! Question "Why Merge Sort"
     Pros:
 
     - **Fast**: Merge sort is much faster than bubble sort. O(n*log(n)) instead of O(n^2).
