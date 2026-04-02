@@ -65,10 +65,8 @@ With five strings, this is instant. With 5 billion? That's where it gets interes
     If you've heard (usually exaggerated) stories about Leetcode and whiteboarding interviews, you might hear the word "algorithm" and think it's synonymous with "hard problem." That's really not the case, and believing it will only psych you out.
 
 
-!!! quote "Quote"
+!!! quote "Seneca"
     *"We suffer more often in imagination than in reality."*
-
-    -- Seneca
 
 ---
 
@@ -201,14 +199,8 @@ print(f"log base 2 of 16 is {math.log(16, 2)}")
 !!! tip "The growth problem"
     Factorials grow *extremely* fast — faster than exponential functions like `2ⁿ`.
 
-
-| n | n! | 2ⁿ |
-|---|----|----|
-| 2 | 2  | 4  |
-| 3 | 6  | 8  |
-| 4 | 24 | 16 |
-| 5 | 120| 32 |
-| 6 | 720| 64 |
+<!-- image section -->
+![Factorial Table](./figures/factorial.png){ align="left" width="300" }
 
 By `n = 4`, `n!` has already overtaken `2ⁿ` — and it never looks back.
 
@@ -253,6 +245,7 @@ Think about the base case first: what is `0!` or `1!`?
 
 **Big O analysis** is just a way for us as computer scientists and programmers to categorize different algorithms by **how they slow down as the input size to the algorithm grows**. Like super roughly speaking, it's a way for us to talk about how slow or how fast algorithms can run. And to be very specific, we're worried about the worstcase runtime.
 
+---
 
 ### linear time - Big O(n)
 
@@ -284,6 +277,7 @@ The rule of thumb to remember: **if you see a single loop running over your inpu
     ![Linear time](./figures/linear_time.png){width="400"}
 </figure>
 
+---
 
 ### Constant Time - Big O(1)
 
@@ -299,6 +293,7 @@ This function has a **Big O categorization of O(1), or Constant time**
     ![Constant time](./figures/const_time.png){width="400"}
 </figure>
 
+---
 
 ### Quadratic time - Big O(n²)
 
@@ -330,6 +325,7 @@ You see the pattern? Every time n and m grow together, the total work grows **qu
 
 We try to avoid this algorthims, For small input sizes, it's totally fine. But if you're dealing with massive inputs — say, image processing or a huge dataset — this kind of nested loop can get slow very quickly.
 
+---
 
 ### logarithmic time - Big O(log(n))
 
@@ -355,6 +351,7 @@ Think of it this way — if O(n²) is a parabola shooting upward, O(log n) is ne
     ![Logarithamic time](./figures/log_time.png){width="400"}
 </figure>
 
+---
 
 ### Exponential time - Big O(2ⁿ)
 
@@ -395,3 +392,28 @@ So to wrap up the whole picture — here's how all the complexity classes stack 
 </figure>
 
 ---
+
+**Big O doesn't care about seconds. It cares about shape.**
+
+Specifically, it only asks one question — as the input grows, how does the work grow? Not how long it takes on your machine, not how fast your CPU is, not whether it runs in 1 nanosecond or 5 seconds. Just the **proportional change**.
+
+So if a function takes 5 seconds on 10,000 items and still takes 5 seconds on 10 million items — that's **O(1), constant time**. The runtime didn't change as the input grew. We don't say "O(5) because it took 5 seconds." That 5 just collapses down to 1. Constants always do.
+
+Now here's where it gets interesting.
+
+You have a `sum` function — loops over the list once, adds everything up. Clearly **O(n)**.
+
+Then you have a `tripleSum` function — does the exact same loop, but three times back to back. So it takes **three times as long**. Wouldn't that make it **O(3n)?**
+
+Technically yes. But in Big O analysis, we don't care. That 3 is a constant. It gets dropped. It's still just **O(n).**
+
+Why? Because the **shape of growth** hasn't changed. Whether you loop once or three times, if the input doubles, the runtime doubles. It's still a straight line on the graph — just a slightly steeper one. And Big O only cares about the shape, not the steepness.
+
+
+Here's the practical split to keep in your head:
+
+- **As a computer scientist** doing Big O analysis — constants don't exist. Drop them.
+- **As a software engineer** shipping real code — constants matter enormously. A constant-time function that takes 5 seconds per call will destroy your user experience.
+
+Big O tells you how your code **scales**. It doesn't tell you if your code is **fast enough**. Both questions matter — just at different moments.
+
