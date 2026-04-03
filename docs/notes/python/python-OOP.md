@@ -117,7 +117,7 @@ This is the clearest way I found to understand the difference. The same coffee m
 Everything lives in one file. Global data. Functions that reach into shared state.
 
 <figure markdown="span">
-    ![Procedural Programming Menu program](./figures/pop_menu.png)
+    ![Procedural Programming Menu program](./figures/pop_menu.jpeg)
 </figure>
 
 It works. But notice — `profit` and `resources` are global. Any function can touch them.
