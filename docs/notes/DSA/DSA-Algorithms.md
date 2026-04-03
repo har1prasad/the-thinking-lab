@@ -485,6 +485,7 @@ The outer loop of insertion sort always executes n times, while the inner loop d
 - Average case: The average case is O(n^2) because the inner loop will execute about half of the time.
 - Worst case: If the data is in reverse order, it's still O(n^2) and the inner loop will execute every time.
 
+
 !!! Question "Why Use Insertion Sort"
     - Fast: for very small data sets (even faster than merge sort and quick sort, which we'll cover later)
     - Adaptive: Faster for partially sorted data sets
