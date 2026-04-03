@@ -116,106 +116,9 @@ This is the clearest way I found to understand the difference. The same coffee m
 
 Everything lives in one file. Global data. Functions that reach into shared state.
 
-```python title="coffee_machine_procedural.py"
-MENU = {
-    "espresso": {
-        "ingredients": {
-            "water": 50,
-            "coffee": 18,
-        },
-        "cost": 1.5,
-    },
-    "latte": {
-        "ingredients": {
-            "water": 200,
-            "milk": 150,
-            "coffee": 24,
-        },
-        "cost": 2.5,
-    },
-    "cappuccino": {
-        "ingredients": {
-            "water": 250,
-            "milk": 100,
-            "coffee": 24,
-        },
-        "cost": 3.0,
-    }
-}
-
-profit = 0
-resources = {
-    "water": 300,
-    "milk": 200,
-    "coffee": 100,
-}
-
-def report():
-    print(f"""
-    Water: {resources["water"]}ml
-    Milk: {resources["milk"]}ml
-    Coffee: {resources["coffee"]}g
-    Money: ${profit}
-    """)
-
-def check_resources(input):
-    order_ingredients = MENU[input]["ingredients"]
-    for item in order_ingredients:
-        if order_ingredients[item] > resources[item]:
-            print(f"Sorry there is not enough {item}.")
-            return False
-    return True
-
-def process_coins():
-    print("Please insert coins.")
-    try:
-        total = int(input("how many quarters?: ")) * 0.25
-        total += int(input("how many dimes?: ")) * 0.1
-        total += int(input("how many nickles?: ")) * 0.05
-        total += int(input("how many pennies?: ")) * 0.01
-    except ValueError:
-        print("Invalid input. Please enter numeric values.")
-        return 0
-    return total
-
-def check_price(price, input):
-    cost = MENU[input]["cost"]
-    if cost <= price:
-        change = round(price - cost, 2)
-        print(f"Here is ${change} in change.")
-        global profit
-        profit += cost
-        return True
-    else:
-        print("Sorry that's not enough money. Money refunded.")
-        return False
-
-def make_coffee(input):
-    order_ingredients = MENU[input]["ingredients"]
-    for item in order_ingredients:
-        resources[item] -= order_ingredients[item]
-    print(f"Here is your {input} ☕️. Enjoy!")
-
-end_of_program = False
-while not end_of_program:
-    user_choice = input("What would you like? (espresso/latte/cappuccino): ").lower()
-    if user_choice == "off":
-        print("The System is shutting down for maintenance......")
-        end_of_program = True
-    elif user_choice == "report":
-        report()
-    else:
-        if user_choice in MENU:
-            if check_resources(user_choice):
-                total = process_coins()
-                if total > 0 and check_price(total, user_choice):
-                    make_coffee(user_choice)
-            else:
-                continue
-        else:
-            print("Invalid choice. Please select from espresso, latte, or cappuccino.")
-            continue
-```
+<figure markdown="span">
+    ![Procedural Programming Menu program](./figures/pop_menu.png)
+</figure>
 
 It works. But notice — `profit` and `resources` are global. Any function can touch them.
 `check_price` modifies `profit` directly. If something goes wrong, you have to trace
@@ -229,145 +132,21 @@ Now imagine this program with ten more features. That's Arun's problem.
 
 Same program. Split across four files. Each class owns its own data and behavior.
 
-```python title="coffee_maker.py"
-class CoffeeMaker:
-    """Models the machine that makes the coffee"""
-    def __init__(self):
-        self.resources = {
-            "water": 300,
-            "milk": 200,
-            "coffee": 100,
-        }
+<figure markdown="span">
+    ![OOP Cofee maker](./figures/coffee_maker.png)
+</figure>
 
-    def report(self):
-        """Prints a report of all resources."""
-        print(f"Water: {self.resources['water']}ml")
-        print(f"Milk: {self.resources['milk']}ml")
-        print(f"Coffee: {self.resources['coffee']}g")
+<figure markdown="span">
+    ![OOP menu](./figures/menu.png)
+</figure>
 
-    def is_resource_sufficient(self, drink):
-        """Returns True when order can be made, False if ingredients are insufficient."""
-        can_make = True
-        for item in drink.ingredients:
-            if drink.ingredients[item] > self.resources[item]:
-                print(f"Sorry there is not enough {item}.")
-                can_make = False
-        return can_make
+<figure markdown="span">
+    ![OOP money machine](./figures/money_maker.png)
+</figure>
 
-    def make_coffee(self, order):
-        """Deducts the required ingredients from the resources."""
-        for item in order.ingredients:
-            self.resources[item] -= order.ingredients[item]
-        print(f"Here is your {order.name} ☕️. Enjoy!")
-```
-
-```python title="menu.py"
-class MenuItem:
-    """Models each Menu Item."""
-    def __init__(self, name, water, milk, coffee, cost):
-        self.name = name
-        self.cost = cost
-        self.ingredients = {
-            "water": water,
-            "milk": milk,
-            "coffee": coffee
-        }
-
-
-class Menu:
-    """Models the Menu with drinks."""
-    def __init__(self):
-        self.menu = [
-            MenuItem(name="latte", water=200, milk=150, coffee=24, cost=2.5),
-            MenuItem(name="espresso", water=50, milk=0, coffee=18, cost=1.5),
-            MenuItem(name="cappuccino", water=250, milk=50, coffee=24, cost=3),
-        ]
-
-    def get_items(self):
-        """Returns all the names of the available menu items"""
-        options = ""
-        for item in self.menu:
-            options += f"{item.name}/"
-        return options
-
-    def find_drink(self, order_name):
-        """Searches the menu for a particular drink by name."""
-        for item in self.menu:
-            if item.name == order_name:
-                return item
-        print("Sorry that item is not available.")
-```
-
-```python title="money_machine.py"
-class MoneyMachine:
-
-    CURRENCY = "$"
-
-    COIN_VALUES = {
-        "quarters": 0.25,
-        "dimes": 0.10,
-        "nickles": 0.05,
-        "pennies": 0.01
-    }
-
-    def __init__(self):
-        self.profit = 0
-        self.money_received = 0
-
-    def report(self):
-        """Prints the current profit"""
-        print(f"Money: {self.CURRENCY}{self.profit}")
-
-    def process_coins(self):
-        """Returns the total calculated from coins inserted."""
-        print("Please insert coins.")
-        for coin in self.COIN_VALUES:
-            self.money_received += int(input(f"How many {coin}?: ")) * self.COIN_VALUES[coin]
-        return self.money_received
-
-    def make_payment(self, cost):
-        """Returns True when payment is accepted, or False if insufficient."""
-        self.process_coins()
-        if self.money_received >= cost:
-            change = round(self.money_received - cost, 2)
-            print(f"Here is {self.CURRENCY}{change} in change.")
-            self.profit += cost
-            self.money_received = 0
-            return True
-        else:
-            print("Sorry that's not enough money. Money refunded.")
-            self.money_received = 0
-            return False
-```
-
-```python title="main.py"
-from menu import Menu
-from coffee_maker import CoffeeMaker
-from money_machine import MoneyMachine
-
-coffeemaker = CoffeeMaker()
-moneymachine = MoneyMachine()
-menus = Menu()
-
-end_of_program = False
-
-while not end_of_program:
-    user_input = input(f"What would you like? {menus.get_items()} :").lower()
-    if user_input == "off":
-        print("The System is shutting down for maintenance......")
-        end_of_program = True
-    elif user_input == "report":
-        coffeemaker.report()
-        moneymachine.report()
-        continue
-    else:
-        menu_item = menus.find_drink(user_input)
-        if menu_item is None:
-            continue
-        if coffeemaker.is_resource_sufficient(menu_item):
-            if moneymachine.make_payment(menu_item.cost):
-                coffeemaker.make_coffee(menu_item)
-```
+<figure markdown="span">
+    ![OOP main](./figures/main.png)
+</figure>
 
 ---
 
@@ -414,58 +193,9 @@ So a **class** is a structure that defines what an object can do, and the **obje
 
 #### Example of Class and object
 
-```python title="Class & Object.py"
-# A constructor(__init__) is a special part of a class (blueprint) that runs when an object is created. 
-# It sets up the object with initial values or actions—this is called initialization.
-
-class Car:
-    def __init__(self):
-        # initialise attributes
-        pass
-
-# the init function is going to be called every time you create a new object from this class.
-
-#------EXAMPLE------#
-
-#----CREATING CLASS, ATTRIBUTES AND METHODS----#
- 
-class User:
-    def __init__(self,user_id,username):
-        self.id = user_id
-        self.username = username
-        self.followers = 0 # Default value (no need to pass it)  
-        self.following = 0
-
-# now we've created a new user, we're initializing it with these starting 
-# values where the first value is going to become the user ID which is going to be the self.id,
-# and the second value is going to become the self.username.
-
-    # when a function is attached to an object then it's called a method.
-    def follows(self, user): 
-        self.following += 1
-        user.followers +=1
-
-# when a user decides to follow another user, well in this case,
-# the user who we're following, their follower count goes up by one and our own,
-# so the self.following count goes up by one as well.
-
-user_1 = User(user_id="001", username="Hariprasad") # object 1
-user_2 = User("002", "Nandu")                       # object 2
-
-# remember that when you add parameters to the constructor which is the init function, 
-# you're now saying that whenever a new object is being constructed from this class,
-# it must provide these two pieces of data.
-
-user_1.follows(user_2)
-
-# here user 1 follows user 2 so user 1's following and users 2's followers increases by one
-
-print(f"user 1's following : {user_1.following}")
-print(f"user 1's followers : {user_1.followers}")
-print(f"user 2's following : {user_2.following}")
-print(f"user 2's followers : {user_2.followers}")
-```
-
+<figure markdown="span">
+    ![Class and object example](./figures/Class-Object.png)
+</figure>
 
 - **Inheritance:** A mechanism where a new class automatically adopts the properties and behaviors of an existing parent class. This establishes a logical hierarchy and promotes clean code reuse as your systems scale over time.
 
