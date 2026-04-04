@@ -353,7 +353,7 @@ Think of it this way — if O(n²) is a parabola shooting upward, O(log n) is ne
 
 ---
 
-### Exponential time - Big O(2ⁿ)
+### Exponential time - Big O(2ⁿ) { #exponential-time }
 
 Now let's talk about the scariest one — **exponential time**, written as **O(2ⁿ)**.
 

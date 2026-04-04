@@ -110,6 +110,7 @@ nav:
       - Basics: notes/python/python-basics.md
       - Object Oriented Programming: notes/python/python-OOP.md  
     - DSA:
+      - Overview: notes/DSA/index.md
       - Basics: notes/DSA/DSA-Basics.md
       - Sorting Algorithms: notes/DSA/DSA-Algorithms.md
   - Projects:
