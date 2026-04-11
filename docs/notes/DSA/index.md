@@ -1,14 +1,8 @@
 This section documents what I've learned on my DSA journey so far.
 
-My approach is simple — watch the tutorial once, understand the concept, 
-then close the video and implement it myself. After that, I write it up 
-here in my own words, both as a future reference for myself and in case 
-it helps someone else along the way.
+My approach is simple — watch the tutorial once, understand the concept, then close the video and implement it myself. After that, I write it up here in my own words, both as a future reference for myself and in case it helps someone else along the way.
 
-The notes are based on this [YouTube video](https://youtu.be/DMeD8trbj6A?si=bTIAebVIieFx7bXN) by boot.dev. I haven't 
-taken the paid course — just the free content on YouTube — but honestly, it's 
-been one of the best learning resources I've come across. A huge shoutout to 
-the boot.dev community for putting this out for free.
+The notes are based on this [YouTube video](https://youtu.be/DMeD8trbj6A?si=bTIAebVIieFx7bXN) by boot.dev. I haven't taken the paid course — just the free content on YouTube — but honestly, **it's been one of the best learning resources I've come across. A huge shoutout to the boot.dev community for putting this out for free**.
 
 The [course link](https://www.boot.dev/courses/learn-data-structures-and-algorithms-python) if you want to check it out yourself.
 
