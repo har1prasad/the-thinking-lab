@@ -113,6 +113,7 @@ nav:
       - Overview: notes/DSA/index.md
       - Basics: notes/DSA/DSA-Basics.md
       - Sorting Algorithms: notes/DSA/DSA-Algorithms.md
+      - Data Structures Intro: notes/DSA/DSA-dsaintro.md
   - Projects:
     - Overview: projects/index.md
     - Expense Tracker: projects/expense-tracker.md
