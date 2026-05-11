@@ -1,4 +1,3 @@
-
 ## HCF and LCM
 
 ### Prime Factorisation
@@ -97,4 +96,3 @@ Always works for two numbers. Use it to double-check your answer.
 </figure>
 
 ---
-
