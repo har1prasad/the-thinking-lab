@@ -92,7 +92,7 @@ Always works for two numbers. Use it to double-check your answer.
 ## Divisibity rules
 
 <figure markdown="span">
-    ![Divisibity-rules](./figures/Divisibility_Rules.jpg)
+    ![Divisibity--rules](./figures/Divisibility_Rules.jpg)
 </figure>
 
 ---
