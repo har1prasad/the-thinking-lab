@@ -114,6 +114,7 @@ nav:
       - Basics: notes/DSA/DSA-Basics.md
       - Sorting Algorithms: notes/DSA/DSA-Algorithms.md
       - Data Structures Intro: notes/DSA/DSA-dsaintro.md
+      - Stack & Queue: notes/DSA/DSA-Stack.md
     - Aptitude:
       - Numerical ability: notes/Aptitude/divisibility-rule.md
   - Projects:
