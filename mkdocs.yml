@@ -1,6 +1,6 @@
 # Site Information
 site_name: The Thinking Lab
-site_author: Hari
+site_author: Hariprasad
 site_description: A digital library
 site_url: https://har1prasad.github.io/the-thinking-lab/
 
@@ -51,6 +51,12 @@ markdown_extensions:
   - md_in_html
   - tables
   - pymdownx.blocks.caption
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
   # Not including in table of content
   - toc:
@@ -119,6 +125,7 @@ nav:
       - Numerical ability: notes/Aptitude/divisibility-rule.md
   - Projects:
     - Overview: projects/index.md
+    - AI File search engine: projects/ai_file_search_assistant.md
     - Expense Tracker: projects/expense-tracker.md
     - AI Web Scrapper: projects/AI-scrapper.md
     - VoteBloc: projects/votebloc.md
