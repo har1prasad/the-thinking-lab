@@ -16,6 +16,8 @@ This page is my answer to that question.
 
 ## Procedural Programming
 
+<!-- ![Procedural Programming](./figures/POP.png){ align=right width=300 } -->
+
 Procedure-oriented programming is a paradigm centered on functions and routines. You break a program into a linear, top-down sequence of steps. The focus is on *how* to do things — the process, the algorithm, the steps.
 
 C is a good example of this. And since C was my first language, this was my default way of thinking.

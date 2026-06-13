@@ -145,6 +145,16 @@ else:           # else
     print("you are basically a kid.")
 ```
 
+### Comparison Operators
+
+- **What is it?** Operators that compare two values and evaluate to a boolean (`True` or `False`).
+- **Operators:** 
+    * `==` (equal to), `!=` (not equal to)
+    * `<` (less than), `>` (greater than)
+    * `<=` (less than or equal to), `>=` (greater than or equal to)
+- **Syntax:** `value1 op value2`
+- **Caveat:** Be careful not to confuse `==` (comparison) with `=` (variable assignment).
+
 ---
 
 ## Looping Statements
@@ -398,6 +408,17 @@ print(a.difference(b))               # In a but not in b → {1, 2}
 print(a.symmetric_difference(b))     # In either a or b but not both → {1, 2, 5, 6}
 ```
 
+### Mathematical Set Operations
+
+Python sets support standard mathematical operations using both methods and operators:
+
+- **Union (`a | b`):** All unique elements from both sets.
+- **Intersection (`a & b`):** Elements present in both sets.
+- **Difference (`a - b`):** Elements in `a` but not in `b`.
+- **Symmetric Difference (`a ^ b`):** Elements in `a` or `b` but *not* both.
+- **Subset (`a <= b`):** Checks if all elements of `a` are inside `b`.
+- **Superset (`a >= b`):** Checks if `a` contains all elements of `b`.
+
 ### Removing duplicates
 
 **Set is great for removing duplicates from lists**
@@ -619,6 +640,32 @@ student = {
     }
 }
 print(student["grades"]["math"])  # → 85
+```
+
+### Modern Dictionary Merging
+
+Prior to Python 3.9, merging dictionaries required using `.update()` or unpacking (`{**d1, **d2}`). Python 3.9 introduced:
+
+- Merge operator (`|`): returns a new dictionary.
+- Update operator (`|=`): merges in-place.
+
+
+### Dictionary Merging and Defaults
+
+```python
+dict_a = {"x": 1, "y": 2}
+dict_b = {"y": 99, "z": 4}  # Overlapping key 'y'
+
+# Merge returns a new dict (values from right dict override left)
+merged = dict_a | dict_b
+print(merged)  # Output: {'x': 1, 'y': 99, 'z': 4}
+
+# Using setdefault
+# If key exists, returns value. If not, inserts key with default and returns default.
+counts = {}
+counts.setdefault("apple", 0)
+counts["apple"] += 1
+print(counts)  # Output: {'apple': 1}
 ```
 
 ---

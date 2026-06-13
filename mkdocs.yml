@@ -114,24 +114,23 @@ nav:
   - Notes:
     - Python:
       - Basics: notes/python/python-basics.md
-      - Object Oriented Programming: notes/python/python-OOP.md  
+      # - Object Oriented Programming: notes/python/python-OOP.md  
     - DSA:
       - Overview: notes/DSA/index.md
       - Basics: notes/DSA/DSA-Basics.md
       - Sorting Algorithms: notes/DSA/DSA-Algorithms.md
       - Data Structures Intro: notes/DSA/DSA-dsaintro.md
       - Stack & Queue: notes/DSA/DSA-Stack-queue.md
+      - Linked List: notes/DSA/DSA-linked_list.md
     - Aptitude:
       - Numerical ability: notes/Aptitude/divisibility-rule.md
   - Projects:
     - Overview: projects/index.md
     - AI File search engine: projects/ai_file_search_assistant.md
+    - Pneumonia Detection CNN: projects/Pneumonia-Detection-CNN.md
     - Expense Tracker: projects/expense-tracker.md
     - AI Web Scrapper: projects/AI-scrapper.md
     - VoteBloc: projects/votebloc.md
     - Flash cards: projects/flashcardsapp.md
     - Snake Xenzia: projects/Snake-Xenzia.md
     - Terminal projects: projects/terminal-projects.md    
-
-
-
