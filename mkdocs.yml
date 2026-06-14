@@ -123,6 +123,8 @@ nav:
       - Tuples: notes/python/python-tuples.md
       - Dictionaries: notes/python/python-dictionaries.md
       - Functions: notes/python/python-functions.md
+      - Operators: notes/python/python-operators.md
+      - Errors & Exception Handling: notes/python/python-errors.md
       # - Object Oriented Programming: notes/python/python-OOP.md  
     - DSA:
       - Overview: notes/DSA/index.md

@@ -1,4 +1,3 @@
-## Functions
 
 **Function** = **reusable blocks of code** that perform specific tasks. They help organize code, avoid repetition, and make programs easier to understand.
 

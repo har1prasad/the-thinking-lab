@@ -1,4 +1,3 @@
-## Variables & Data Types
 
 **variable** = A reusable container for a value (string, integer, float, boolean). The variable behaves as if it was the value that it contains
 

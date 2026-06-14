@@ -1,4 +1,3 @@
-## List
 
 **Collection** = single "variable" used to store multiple values  
 **List** = [] ordered and changeable. Duplicates OK  

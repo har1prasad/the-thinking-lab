@@ -1,4 +1,3 @@
-## Sets
 
 **collection** = single "variable" used to store multiple values  
 **Set** = {} unordered, unindexed, and **no duplicates allowed**  

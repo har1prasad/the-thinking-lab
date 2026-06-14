@@ -1,4 +1,3 @@
-## String
 
 **String** = an ordered sequence of characters, enclosed in quotes.  
 Strings are immutable  once created, they cannot be changed [only can be altered or chnaged using slicing].

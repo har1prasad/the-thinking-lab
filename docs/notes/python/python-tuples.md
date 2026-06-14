@@ -1,4 +1,3 @@
-## Tuples
 
 **collection** = single "variable" used to store multiple values  
 **Tuple** = () ordered and unchangeable (immutable). Duplicates allowed.  
