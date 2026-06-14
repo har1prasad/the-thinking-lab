@@ -119,10 +119,10 @@ A set is essentially a dictionary with keys and no values. Both use the same has
 
 > For the technical breakdown of each — syntax, methods, and gotchas — head over to the:
 
- - [Python List](../python/python-basics.md#list) 
- - [Python Set](../python/python-basics.md#sets) 
- - [Python Tuple](../python/python-basics.md#tuples) 
- - [Python Dictionaries](../python/python-basics.md#dictionaries)
+ - [Python List](../python/python-list.md) 
+ - [Python Set](../python/python-sets.md) 
+ - [Python Tuple](../python/python-tuples.md) 
+ - [Python Dictionaries](../python/python-dictionaries.md)
 
 
 !!! tip "The one-line takeaway"

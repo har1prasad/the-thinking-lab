@@ -113,7 +113,16 @@ nav:
   - About Me: About-me.md
   - Notes:
     - Python:
-      - Basics: notes/python/python-basics.md
+      - Introduction: notes/python/python-introduction.md
+      - Variables & data types: notes/python/python-variables.md
+      - Strings: notes/python/python-string.md
+      - Comparisons: notes/python/python-comparisons.md
+      - Loops: notes/python/python-loops.md
+      - Lists: notes/python/python-list.md
+      - Sets: notes/python/python-sets.md
+      - Tuples: notes/python/python-tuples.md
+      - Dictionaries: notes/python/python-dictionaries.md
+      - Functions: notes/python/python-functions.md
       # - Object Oriented Programming: notes/python/python-OOP.md  
     - DSA:
       - Overview: notes/DSA/index.md
