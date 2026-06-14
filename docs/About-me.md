@@ -1,5 +1,7 @@
 # About Me
 
+![About me](./assets/THE_THINKING_LAB.png)
+
 **Hi, I'm Hariprasad AP — Hari**.
 
 I'm a software engineering student from Kerala, India, currently in Bangalore finishing my MCA at Presidency College (Autonomous).
@@ -8,7 +10,7 @@ I build things, break them to understand them, and document what I learn along t
 
 My work sits across **Python, backend systems, and data** — but what actually interests me is the problem underneath the code. How do you design something that holds up under pressure? How do you build systems that solve something real?
 
-I've worked on projects involving automation, data pipelines, and web systems — each one a step toward writing software that's thoughtful, not just functional.
+I've built projects ranging from AI-powered search systems and machine learning models to automation tools and full-stack applications, each one a step toward writing software that's thoughtful, not just functional.
 
 Outside of code, I play chess, shoot photos, edit videos, and watch more films than I probably should. These keep me sharp in ways that debugging rarely does.
 
@@ -19,7 +21,7 @@ Outside of code, I play chess, shoot photos, edit videos, and watch more films t
 - Projects I've built and the thinking behind them
 - Notes and references from my learning process
 - Ideas I'm exploring, half-formed and otherwise
-- A honest record of where I am and where I'm headed
+- An honest record of where I am and where I'm headed
 
 ---
 

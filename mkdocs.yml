@@ -111,7 +111,7 @@ extra_css:
 nav:
   - Home: index.md
   - About Me: About-me.md
-  - Notes:
+  - Knowledge Base:
     - Python:
       - Introduction: notes/python/python-introduction.md
       - Variables & data types: notes/python/python-variables.md
